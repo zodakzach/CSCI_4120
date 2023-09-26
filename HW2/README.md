@@ -10,7 +10,7 @@ To use this code to draw a confusion matrix based off the optimal K value:
 2. Install the required Python libraries:
 
    ```bash
-   pip install scikit-learn yellowbrick
+   pip install scikit-learn yellowbrick numpy seaborn matplotlib
 
 3. Run each cell in this notebook sequentially.
 
@@ -36,16 +36,22 @@ Hence, based on the visual analysis of the elbow plot, we selected K=4 as the op
 
 ![Alt text](image.png)
 
+## Best k Accuracy
+The accuracy score for the K-means clustering results is reported as 1.00 (100%). This high accuracy score signifies that, in the specific context of the dataset used and the selected parameters, our K-means clustering algorithm was able to perfectly assign data points to their true cluster labels.
+
+**Key Points**:
+
+**Synthetic Data**: It's important to note that this result was achieved using synthetic data generated with well-separated clusters.
+
+**Optimal K**: The optimal number of clusters (K) was determined using the elbow method, ensuring that K-means was applied with an appropriate number of clusters for this specific data distribution.
+
+**Ground Truth**: We had access to the true labels for this synthetic data, which allowed us to calculate the accuracy score. In practical, real-world scenarios, this level of perfect accuracy is less common due to the complexity and noise present in real data.
+
 ## Confusion Matrix for the Best K
 
 Here is the confusion matrix for the best K value obtained from this notebook:
 
-|          | Cluster 1 | Cluster 2 | Cluster 3 | Cluster 4 |
-|----------|-----------|-----------|-----------|-----------|
-| Class 1  |    75     |    0      |    0      |    0      |
-| Class 2  |    0      |    75     |    0      |    0      |
-| Class 3  |    0      |    0      |    0      |    75     |
-| Class 4  |    0      |    0      |    75     |    0      |
+![Alt text](image-1.png)
 
 The confusion matrix shows how many data points from each true class were correctly assigned to each cluster. In this example, we have four clusters, and each cluster is ideally associated with a single class.
 
