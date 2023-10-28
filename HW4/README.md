@@ -32,6 +32,7 @@ Conducted a thorough analysis of the three regression models. Here are the key f
 - **Performance:** This model provides a baseline for comparison.
 ### Lasso Regression
 - **Cross-Validation Score:** 233371.92779237698
+- **Best Lasso Alpha:** 7.56463327554629
 - **Performance:** Lasso Regression performed slightly better than Linear Regression.
 ### Ridge Regression
 - **Cross-Validation Score:** 232567.31580303918
